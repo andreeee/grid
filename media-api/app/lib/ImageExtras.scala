@@ -19,9 +19,15 @@ object ImageExtras {
 
   def hasCredit(meta: ImageMetadata) = optToBool(meta.credit)
   def hasDescription(meta: ImageMetadata) = optToBool(meta.description)
-  def isInvalidPng(image: Image) =
-    image.source.mimeType == Some("image/png") &&
-      image.fileMetadata.colourModelInformation.get("colorType").getOrElse("") != "True Color"
+  def isInvalidPng(image: Image): Boolean = {
+    image.source.mimeType match {
+      case Some("image/jpeg") => false
+      case _ => image.fileMetadata.colourModelInformation.get("hasAlpha") match {
+        case Some("false") => false
+        case _ => true
+      }
+    }
+  }
 
   def validityMap(image: Image): Map[String, Boolean] = Map(
     "missing_credit"              -> !hasCredit(image.metadata),
