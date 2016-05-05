@@ -170,8 +170,10 @@
 
 <div class="image-holder">
     <div class="easel">
-        <div class="easel__canvas" ng:if="!ctrl.crop">
-            <img class="easel__image"
+        <div class="easel__canvas"
+            ng:if="!ctrl.crop"
+        >
+            <img class="easel__image checkered__background"
                  alt="preview of original image"
                  ng:src="{{:: ctrl.optimisedImageUri}}"
                  grid:track-image="ctrl.image"
@@ -191,7 +193,7 @@
                ui:drag-data="ctrl.image | asImageAndCropsDragData:ctrl.crop"
                ui:drag-image="extremeAssets.smallest | assetFile">
                 <!-- TODO: Add tracking to crop -->
-                <img class="easel__image"
+                <img class="easel__image checkered__background"
                      alt="cropped image"
                      ng:src="{{:: extremeAssets.largest | assetFile}}"
                 />
