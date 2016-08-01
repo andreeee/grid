@@ -12,7 +12,7 @@ trait PanDomainAuthActions extends AuthActions {
   lazy val properties = Properties.fromPath("/etc/gu/panda.properties")
 
   override def validateUser(authedUser: AuthenticatedUser): Boolean = {
-    (authedUser.user.emailDomain == "guardian.co.uk") && authedUser.multiFactor
+    (authedUser.user.emailDomain == "goodeggs.com")
   }
 
   val authCallbackBaseUri: String

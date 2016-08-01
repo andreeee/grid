@@ -11,7 +11,7 @@ trait CommonPlayAppConfig {
 
   val properties: Map[String, String]
 
-  final val awsEndpoint = "ec2.eu-west-1.amazonaws.com"
+  final val awsEndpoint = "ec2.us-east-1.amazonaws.com"
   final val elasticsearchStack = "media-service"
   final val elasticsearchApp   = "elasticsearch"
   final val stackName          = "media-service"

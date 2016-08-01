@@ -10,7 +10,7 @@ import scalaz.syntax.id._
 
 class SNS(credentials: AWSCredentials, topicArn: String) {
 
-  val snsEndpoint = "sns.eu-west-1.amazonaws.com"
+  val snsEndpoint = "sns.us-east-1.amazonaws.com"
 
   lazy val client: AmazonSNS =
     new AmazonSNSClient(credentials) <| (_ setEndpoint snsEndpoint)

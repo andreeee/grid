@@ -2,6 +2,8 @@ version: '2'
 services:
   # Auto generates the properties files for all services and the nginx config
   configs:
+    environment:
+      PANDA_BUCKET_NAME: 'grid-panda-goodeggs-dev'
     image: python:2.7
     entrypoint: /entrypoint.sh
     volumes:
@@ -28,6 +30,7 @@ services:
   media-api:
     environment:
       APP: media-api
+      PANDA_BUCKET_NAME: 'grid-panda-goodeggs-dev'
     extends:
       file: ./docker/docker-compose-sbt.yml
       service: sbt
@@ -41,6 +44,7 @@ services:
   thrall:
     environment:
       APP: thrall
+      PANDA_BUCKET_NAME: 'grid-panda-goodeggs-dev'
     extends:
       file: ./docker/docker-compose-sbt.yml
       service: sbt
@@ -54,6 +58,7 @@ services:
   image-loader:
     environment:
       APP: image-loader
+      PANDA_BUCKET_NAME: 'grid-panda-goodeggs-dev'
     extends:
       file: ./docker/docker-compose-sbt.yml
       service: sbt
@@ -66,6 +71,7 @@ services:
   kahuna:
     environment:
       APP: kahuna
+      PANDA_BUCKET_NAME: 'grid-panda-goodeggs-dev'
     extends:
       file: ./docker/docker-compose-sbt.yml
       service: sbt
@@ -78,6 +84,7 @@ services:
   cropper:
     environment:
       APP: cropper
+      PANDA_BUCKET_NAME: 'grid-panda-goodeggs-dev'
     extends:
       file: ./docker/docker-compose-sbt.yml
       service: sbt
@@ -90,6 +97,7 @@ services:
   metadata-editor:
     environment:
       APP: metadata-editor
+      PANDA_BUCKET_NAME: 'grid-panda-goodeggs-dev'
     extends:
       file: ./docker/docker-compose-sbt.yml
       service: sbt
@@ -102,6 +110,7 @@ services:
   usage:
     environment:
       APP: usage
+      PANDA_BUCKET_NAME: 'grid-panda-goodeggs-dev'
     extends:
       file: ./docker/docker-compose-sbt.yml
       service: sbt
@@ -114,6 +123,7 @@ services:
   collections:
     environment:
       APP: collections
+      PANDA_BUCKET_NAME: 'grid-panda-goodeggs-dev'
     extends:
       file: ./docker/docker-compose-sbt.yml
       service: sbt
@@ -126,6 +136,7 @@ services:
   auth:
     environment:
       APP: auth
+      PANDA_BUCKET_NAME: 'grid-panda-goodeggs-dev'
     extends:
       file: ./docker/docker-compose-sbt.yml
       service: sbt

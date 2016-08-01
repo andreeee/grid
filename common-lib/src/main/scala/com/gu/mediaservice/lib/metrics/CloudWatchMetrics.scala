@@ -67,7 +67,7 @@ abstract class CloudWatchMetrics(namespace: String, credentials: AWSCredentials)
   }
 
   private val client: AmazonCloudWatch =
-    new AmazonCloudWatchClient(credentials) <| (_ setEndpoint "monitoring.eu-west-1.amazonaws.com")
+    new AmazonCloudWatchClient(credentials) <| (_ setEndpoint "monitoring.us-east-1.amazonaws.com")
 
   private def putData(data: Seq[MetricDatum]): Task[Unit] = Task {
     client.putMetricData(new PutMetricDataRequest()

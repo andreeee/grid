@@ -8,5 +8,5 @@ cp /configs/etc/nginx/ssl/media-service.key /etc/nginx/media-service.key
 
 cp /configs/etc/nginx/ssl/star.media-service.crt /etc/nginx/star.media-service.crt
 cp /configs/etc/nginx/ssl/star.media-service.key /etc/nginx/star.media-service.key
-
+mv /etc/nginx/sites-enabled/leases.conf /etc/
 nginx -g "daemon off;"
