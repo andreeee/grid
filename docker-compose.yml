@@ -25,6 +25,7 @@ services:
       - "9300:9300"
     volumes:
       - "./docker/configs/elasticsearch:/usr/share/elasticsearch/config"
+      - "./docker/data/elasticsearch:/usr/share/elasticsearch/data"
     restart: unless-stopped
 
   media-api:

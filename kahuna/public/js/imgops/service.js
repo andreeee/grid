@@ -5,7 +5,7 @@ export var imgops = angular.module('kahuna.imgops', []);
 imgops.factory('imgops', ['$window', function($window) {
     const quality = 85;
 
-    const lowResMaxWidth  = 800;
+    const lowResMaxWidth  = 1152;
     const lowResMaxHeight = 800;
 
 

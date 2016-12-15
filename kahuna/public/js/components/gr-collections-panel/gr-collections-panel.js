@@ -70,7 +70,7 @@ grCollectionsPanel.controller('GrCollectionsPanelCtrl', [
     ctrl.error = false;
 
     collections.getCollections().then(collections => {
-        ctrl.collections = collections.data.children;
+	ctrl.collections = collections.data.children;
         // this will trigger the remember-scroll-top directive to return
         // users to their previous position on the collections panel
         // once the tree has been rendered

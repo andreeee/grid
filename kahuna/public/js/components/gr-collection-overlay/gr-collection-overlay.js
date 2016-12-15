@@ -22,7 +22,6 @@ collectionOverlay.controller('GrCollectionOverlay', ['$scope', '$timeout', 'coll
 
         function openCollectionTree() {
             ctrl.addCollection = true;
-
             collections.getCollections().then(collections => {
                 ctrl.collections = collections.data.children;
                 // this will trigger the remember-scroll-top directive to return

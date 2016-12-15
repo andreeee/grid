@@ -152,7 +152,6 @@ imageEditor.controller('ImageEditorCtrl', [
 
     function openCollectionTree() {
         ctrl.addCollection = true;
-
         collections.getCollections().then(collections => {
             ctrl.collections = collections.data.children;
             // this will trigger the remember-scroll-top directive to return
